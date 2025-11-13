@@ -1,0 +1,88 @@
+2025-11-13 21:15:34,687 - INFO - Connected to database: database\ecommerce.db
+2025-11-13 21:15:34,688 - INFO - Loading schema from database\schema.sql
+2025-11-13 21:15:34,689 - INFO - Schema created successfully
+2025-11-13 21:15:34,689 - INFO - Loading products.csv...
+2025-11-13 21:15:34,717 - INFO - Loaded 200 rows from products.csv
+2025-11-13 21:15:34,721 - ERROR - ETL pipeline failed: no such table: products
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics-pipeline\database\setup_database.py", line 534, in run_etl
+    cursor.execute(f"DELETE FROM {table_name}")
+sqlite3.OperationalError: no such table: products
+2025-11-13 21:15:34,723 - INFO - Database connection closed
+2025-11-13 21:16:21,270 - INFO - Connected to database: database\ecommerce.db
+2025-11-13 21:16:21,272 - INFO - Loading schema from database\schema.sql
+2025-11-13 21:16:24,770 - INFO - Schema created successfully. Tables: customers, order_items, orders, products, reviews
+2025-11-13 21:16:24,770 - INFO - Loading products.csv...
+2025-11-13 21:16:24,779 - INFO - Loaded 200 rows from products.csv
+2025-11-13 21:16:24,890 - INFO - Inserted 200 rows into products
+2025-11-13 21:16:24,890 - INFO - Loading customers.csv...
+2025-11-13 21:16:24,916 - INFO - Loaded 1000 rows from customers.csv
+2025-11-13 21:16:25,156 - INFO - Inserted 1000 rows into customers
+2025-11-13 21:16:25,157 - INFO - Loading orders.csv...
+2025-11-13 21:16:25,180 - INFO - Loaded 3000 rows from orders.csv
+2025-11-13 21:16:25,513 - INFO - Inserted 3000 rows into orders
+2025-11-13 21:16:25,514 - INFO - Loading order_items.csv...
+2025-11-13 21:16:25,553 - INFO - Loaded 8000 rows from order_items.csv
+2025-11-13 21:16:26,990 - INFO - Inserted 8000 rows into order_items
+2025-11-13 21:16:26,992 - INFO - Loading reviews.csv...
+2025-11-13 21:16:27,029 - INFO - Loaded 2500 rows from reviews.csv
+2025-11-13 21:16:27,270 - INFO - Inserted 2500 rows into reviews
+2025-11-13 21:16:27,270 - INFO - Updating database statistics...
+2025-11-13 21:16:27,369 - INFO - Generating data quality report...
+2025-11-13 21:16:27,372 - INFO - Validating referential integrity...
+2025-11-13 21:16:27,375 - INFO - Validating business rules...
+2025-11-13 21:16:27,401 - INFO - ETL pipeline completed successfully
+2025-11-13 21:16:27,403 - INFO - Database connection closed
+2025-11-13 21:20:02,380 - INFO - Connected to database: database\ecommerce.db
+2025-11-13 21:20:02,381 - INFO - Loading schema from database\schema.sql
+2025-11-13 21:20:02,382 - INFO - Schema created successfully. Tables: customers, order_items, orders, products, reviews, sqlite_stat1
+2025-11-13 21:20:02,383 - INFO - Loading products.csv...
+2025-11-13 21:20:02,394 - INFO - Loaded 200 rows from products.csv
+2025-11-13 21:20:02,396 - ERROR - ETL pipeline failed: FOREIGN KEY constraint failed
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics-pipeline\scripts\setup_database.py", line 544, in run_etl
+    cursor.execute(f"DELETE FROM {table_name}")
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+2025-11-13 21:20:02,399 - INFO - Database connection closed
+2025-11-13 21:23:40,375 - INFO - Connected to database: database\ecommerce.db
+2025-11-13 21:23:40,376 - INFO - Loading schema from database\schema.sql
+2025-11-13 21:23:40,378 - INFO - Schema created successfully. Tables: customers, order_items, orders, products, reviews, sqlite_stat1
+2025-11-13 21:23:40,379 - INFO - Loading products.csv...
+2025-11-13 21:23:40,387 - INFO - Loaded 200 rows from products.csv
+2025-11-13 21:23:40,390 - ERROR - ETL pipeline failed: FOREIGN KEY constraint failed
+Traceback (most recent call last):
+  File "D:\ecommerce-analytics-pipeline\scripts\setup_database.py", line 544, in run_etl
+    cursor.execute(f"DELETE FROM {table_name}")
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+2025-11-13 21:23:40,394 - INFO - Database connection closed
+2025-11-13 21:35:33,406 - INFO - Connected to database: database\ecommerce.db
+2025-11-13 21:35:33,406 - INFO - Loading schema from database\schema.sql
+2025-11-13 21:35:33,495 - INFO - Schema created/verified. Tables: customers, order_items, orders, products, reviews, sqlite_stat1
+2025-11-13 21:35:33,496 - INFO - Clearing existing data prior to reload (FK-safe order)...
+2025-11-13 21:35:33,574 - INFO - Cleared table: order_items
+2025-11-13 21:35:33,590 - INFO - Cleared table: reviews
+2025-11-13 21:35:33,642 - INFO - Cleared table: orders
+2025-11-13 21:35:33,645 - INFO - Cleared table: products
+2025-11-13 21:35:33,666 - INFO - Cleared table: customers
+2025-11-13 21:35:33,764 - INFO - Data cleared (transaction committed)
+2025-11-13 21:35:33,765 - INFO - Loading data\synthetic\products.csv for table products...
+2025-11-13 21:35:33,785 - INFO - Loaded 200 rows from products.csv
+2025-11-13 21:35:33,899 - INFO - Inserted 200 rows into products
+2025-11-13 21:35:33,899 - INFO - Loading data\synthetic\customers.csv for table customers...
+2025-11-13 21:35:33,932 - INFO - Loaded 1000 rows from customers.csv
+2025-11-13 21:35:34,085 - INFO - Inserted 1000 rows into customers
+2025-11-13 21:35:34,085 - INFO - Loading data\synthetic\orders.csv for table orders...
+2025-11-13 21:35:34,134 - INFO - Loaded 3000 rows from orders.csv
+2025-11-13 21:35:34,433 - INFO - Inserted 3000 rows into orders
+2025-11-13 21:35:34,434 - INFO - Loading data\synthetic\order_items.csv for table order_items...
+2025-11-13 21:35:34,466 - INFO - Loaded 8000 rows from order_items.csv
+2025-11-13 21:35:34,901 - INFO - Inserted 8000 rows into order_items
+2025-11-13 21:35:34,902 - INFO - Loading data\synthetic\reviews.csv for table reviews...
+2025-11-13 21:35:34,951 - INFO - Loaded 2500 rows from reviews.csv
+2025-11-13 21:35:35,188 - INFO - Inserted 2500 rows into reviews
+2025-11-13 21:35:35,189 - INFO - Updating database statistics...
+2025-11-13 21:35:35,283 - INFO - Generating data quality report...
+2025-11-13 21:35:35,285 - INFO - Validating referential integrity...
+2025-11-13 21:35:35,288 - INFO - Validating business rules...
+2025-11-13 21:35:35,295 - INFO - ETL pipeline completed successfully
+2025-11-13 21:35:35,296 - INFO - Database connection closed
